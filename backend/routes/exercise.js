@@ -31,7 +31,7 @@ Router.delete("/:id", async (req, res) => {
     const _id = req.params.id;
     try {
         await Exercise.findByIdAndDelete(_id);
-        req.status(200).send("exercise deleted!");
+        res.status(200).send("exercise deleted!");
     }
     catch(err) {
         console.error(err);
